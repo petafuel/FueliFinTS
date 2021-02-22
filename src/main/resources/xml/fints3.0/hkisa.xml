@@ -1,0 +1,65 @@
+<segment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../xsd/fints3.0/segment.xsd">
+
+    <segment_version version="3">
+        <deg element_name="Segmentkopf"
+             element_anzahl="1"
+             element_status="M">
+            <de element_name="Segmentname" element_format="an" element_laenge="..6" element_status="M"
+                element_anzahl="1"/>
+            <de element_name="Segmentnummer" element_format="num" element_laenge="..3" element_status="M"
+                element_anzahl="1"/>
+            <de element_name="Segmentversion" element_format="num" element_laenge="..2" element_status="M"
+                element_anzahl="1"/>
+        </deg>
+
+        <de element_name="Nachrichtenbeziehung"
+            element_format="code"
+            element_laenge="1"
+            element_status="M"
+            element_anzahl="1"
+            element_restriktionen="2"/>
+
+        <de element_name="Bezeichner für Funktionstyp"
+            element_format="code"
+            element_laenge="..3"
+            element_status="M"
+            element_anzahl="1"
+            element_restriktionen="124"/>
+
+        <deg element_name="Sicherheitsprofil"
+             element_status="M"
+             element_anzahl="1">
+            <de element_name="Sicherheitsverfahren,Code" element_format="code" element_laenge="3" element_status="M"
+                element_anzahl="1" element_restriktionen="DDV, RAH, RDH, PIN, EMV"/>
+            <de element_name="Version des Sicherheitsverfahrens" element_format="num" element_laenge="..3"
+                element_status="M"
+                element_anzahl="1" element_restriktionen="1, 2, 3, 4, 5, 6, 7, 8, 9, 10"/>
+        </deg>
+
+        <deg element_name="Schlüsselname"
+             element_status="M"
+             element_anzahl="1">
+            <deg element_name="Kreditinstituteskennung" element_format="kik" element_status="M"
+                 element_anzahl="1"/>
+            <de element_name="Benutzerkennung" element_format="id" element_status="M"
+                element_anzahl="1"/>
+            <de element_name="Schlüsselart" element_format="code" element_laenge="1" element_status="M"
+                element_anzahl="1" element_restriktionen="D, S, V"/>
+            <de element_name="Schlüsselnummer" element_format="num" element_laenge="..3" element_status="M"
+                element_anzahl="1"/>
+            <de element_name="Schlüsselnummer" element_format="num" element_status="M"
+                element_anzahl="1"/>
+        </deg>
+
+        <deg element_name="Zertifikat"
+             element_status="O"
+             element_anzahl="1">
+
+            <de element_name="Zertifikatstyp" element_format="code" element_laenge="1" element_status="M"
+                element_anzahl="1" element_restriktionen="1, 2, 3"/>
+            <de element_name="Zertifikatsinhalt" element_format="bin" element_laenge="..4096" element_status="M"
+                element_anzahl="1"/>
+        </deg>
+    </segment_version>
+</segment>

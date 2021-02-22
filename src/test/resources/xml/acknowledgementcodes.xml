@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--    See FINTS_4.0_Formals.pdf (II.11.3) for further information -->
+
+<codes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="xsd/acknowledgement/acknowledgementcodes.xsd">
+    <!-- success codes -->
+    <ack_code class="success" code="0010" text="Entgegengenommen"/>
+    <ack_code class="success" code="0020" text="Ausgeführt"/>
+    <ack_code class="success" code="0030" text="Auftrag empfangen Sicherheitsfreigabe erforderlich."/>
+    <ack_code class="success" code="0031" text="Auftragsstorno durchgeführt."/>
+    <ack_code class="success" code="0090" text="TAN OK."/>
+    <ack_code class="success" code="0100" text="Dialog beendet."/>
+    <ack_code class="success" code="0900" text="TAN gültig"/>
+    <ack_code class="success" code="0901" text="PIN gültig"/>
+
+    <!-- info codes -->
+    <ack_code class="info" code="1010" text="Es liegen neue Kontoinformationen vor"/>
+    <ack_code class="info" code="1040" text="BPD nicht mehr aktuell, aktuelle Version enthalten"/>
+    <ack_code class="info" code="1050" text="UPD nicht mehr aktuell, aktuelle Version enthalten"/>
+    <ack_code class="info" code="1060" text="Teilweise liegen Hinweise vor"/>
+
+    <!-- warning codes -->
+    <ack_code class="warning" code="3000" text="Auftrag nur teilweise ausgeführt."/>
+    <ack_code class="warning" code="3010" text="Nicht verfügbar"/>
+    <ack_code class="warning" code="3021" text="IBAN / BIC für Auftrag."/>
+    <ack_code class="warning" code="3030" text="Korrigiert, da ungültig."/>
+    <ack_code class="warning" code="3040" text="Es liegen weitere Informationen vor."/>
+    <ack_code class="warning" code="3050" text="Nicht mehr aktuell. Wird noch %d Tage akzeptiert."/>
+    <ack_code class="warning" code="3060" text="Teilweise liegen Warnungen vor."/>
+    <ack_code class="warning" code="3070"
+              text="Neuanlage einer PIN, TAN-Liste oder Generator für Benutzer %s schlug fehl."/>
+    <ack_code class="warning" code="3071"
+              text="Die Benachrichtigung des Autorisierungssystems für Benutzer %s schlug fehl."/>
+    <ack_code class="warning" code="3072" text="Neue Anmeldedaten bitte berücksichtigen."/>
+    <ack_code class="warning" code="3080" text="Es liegen weitere Informationen vor."/>
+    <ack_code class="warning" code="3210" text="Auftrag angenommen, fehlerhafte Einzelpositionen."/>
+    <ack_code class="warning" code="3220" text="Auftrag ausgeführt, fehlerhafte Einzelpositionen."/>
+    <ack_code class="warning" code="3230" text="Die Zahlung erfolgt an neue Empfänger-Konto-/Bankverbindung."/>
+    <ack_code class="warning" code="3260" text="Sammler unvollständig verarbeitet. 1 Satz fehlerhaft."/>
+    <ack_code class="warning" code="3290" text="Die eingegebene Bankleitzahl ist ungültig."/>
+    <ack_code class="warning" code="3310" text="Mehrfache Unterzeichnung durch identischen Benutzer nicht zulässig."/>
+    <ack_code class="warning" code="3310" text="Ini-Brief erforderlich."/>
+    <ack_code class="warning" code="3320" text="Ini-Brief nicht erforderlich"/>
+    <ack_code class="warning" code="3330" text="Schlüssel liegen bereits vor."/>
+    <ack_code class="warning" code="3340" text="Karte erneuern. Kundenschlüssel noch gültig bis %s."/>
+    <ack_code class="warning" code="3340"
+              text="RDH-2-Kundenschlüssel neu generieren und einreichen. Wird noch %d Tage akzeptiert."/>
+    <ack_code class="warning" code="3345" text="Profilwechsel Chipkarte (RDHx) durchführen bis %s."/>
+    <ack_code class="warning" code="3390"
+              text="Sicherheitsprofilwechsel auf RDH-2 durchführen. RDH-2-Kundenschlüssel neu generieren und einreichen. RDH-1 wird noch %d Tage akzeptiert."/>
+    <ack_code class="warning" code="3300" text="Doppeneinreichung Signatur-ID %s."/>
+    <ack_code class="warning" code="3710" text="Bei Beträgen > 50.000 EUR ist eine AWV-Meldung erforderlich."/>
+    <ack_code class="warning" code="3810" text="Zusätzliche Datei %s abholen."/>
+    <ack_code class="warning" code="3820" text="Profilwechsel Chipkarte (RDHx) durchführen bis %s."/>
+    <ack_code class="warning" code="3900" text="Mitteilung ohne Text erhalten."/>
+    <ack_code class="warning" code="3910" text="TAN wurde nicht verbraucht."/>
+    <ack_code class="warning" code="3911" text="Bitte neue TAN-Liste aktivieren."/>
+    <ack_code class="warning" code="3912" text="Neue TAN-Liste wird automatisch verschickt."/>
+    <ack_code class="warning" code="3913" text="TAN wurde verbraucht."/>
+    <ack_code class="warning" code="3914" text="Neue TAN-Liste aktivieren."/>
+    <ack_code class="warning" code="3915" text="Neue TAN-Liste aktiviert."/>
+    <ack_code class="warning" code="3916" text="PIN muss wegen erstmaliger Anmeldung zwangsweise geändert werden."/>
+    <ack_code class="warning" code="3917"
+              text="Alte TAN-Liste ist infolge der Aktivierung einer neuen TAN-Liste ungültig."/>
+    <ack_code class="warning" code="3918" text="Kompetenz nicht ausreichend-weitere TAN erforderlich."/>
+    <ack_code class="warning" code="3920" text="Zugelassene Ein- und Zwei-Schritt-Verfahren für den Benutzer"/>
+    <ack_code class="warning" code="3921" text="Zugelassene AZS-Verfahren für den Benutzer"/>
+    <ack_code class="warning" code="3931" text="PIN gesperrt. Entsperren mit GV 'PIN-Sperre aufheben' möglich."/>
+    <ack_code class="warning" code="3932" text="Bitte führen Sie zunächst eine PIN-Änderung durch."/>
+    <ack_code class="warning" code="3933" text="TAN-Generator gesperrt, Synchronisierung erfordert Kartenummer %s."/>
+    <ack_code class="warning" code="3934" text="Bitte eine Karte zur Verwendung mit chipTAN zulassen"/>
+    <ack_code class="warning" code="3935" text="Bitte eine Karte zur Verwendung mit chipTAN zulassen"/>
+    <ack_code class="warning" code="3936"
+              text="Die neuen Funktionen stehen erst nach einer erneuten Anmeldung zur Verfügung"/>
+    <ack_code class="warning" code="3938" text="Ihr Zugang ist vorläufig gesperrt - bitte PIN-Sperre aufheben"/>
+    <ack_code class="warning" code="3939"
+              text="mobileTAN-Freischaltung erforderlich. SMS-Freischaltcode wurde versendet."/>
+    <ack_code class="warning" code="3940" text="Reservierte TAN wurde entwertet"/>
+    <ack_code class="warning" code="3941" text="Zur PIN-Änderung stehen folgende Rufnummern zur Verfügung: %s"/>
+    <ack_code class="warning" code="3942" text="Freischaltung einer Mobilfunkverbindung zwingend erforderlich"/>
+    <ack_code class="warning" code="3944" text="Bitte benutzen Sie die erhaltene Folgekarte zur TAN-Erzeugung"/>
+    <ack_code class="warning" code="3950" text="Die Selbstumstellung auf ein anderes Sicherheitsverfahren ist möglich"/>
+    <ack_code class="warning" code="3951"
+              text="Die Selbstumstellung auf ein anderes Sicherheitsverfahren ist erforderlich"/>
+    <ack_code class="warning" code="3952" text="Erfolgreicher Prozessschritt bei der Selbstumstellung"/>
+
+
+    <!-- error codes -->
+    <ack_code class="error" code="9000" text="Status indifferent"/>
+    <ack_code class="error" code="9010" text="Verarbeitung nicht möglich"/>
+    <ack_code class="error" code="9020" text="Antwort zu groß"/>
+    <ack_code class="error" code="9021" text="IBAN / BIC konnte nicht ermittelt werden"/>
+    <ack_code class="error" code="9030" text="Fehler bei Entschlüsselung"/>
+    <ack_code class="error" code="9040" text="Fehler bei Dekomprimierung"/>
+    <ack_code class="error" code="9050" text="Teilweise Fehlerhaft"/>
+    <ack_code class="error" code="9075" text="Starke Authentifizierung erforderlich"/>
+    <ack_code class="error" code="9078" text="Dialog abgebrochen - FinTS-Produkt ist nicht registriert"/>
+    <ack_code class="error" code="9110" text="Unbekannter Aufbau"/>
+    <ack_code class="error" code="9120" text="Nicht erwartet"/>
+    <ack_code class="error" code="9130" text="Inhalt syntaktisch ungültig"/>
+    <ack_code class="error" code="9140" text="Inhalt zu lang"/>
+    <ack_code class="error" code="9145" text="Inhalt zu kurz"/>
+    <ack_code class="error" code="9150" text="Belegung nicht erlaubt"/>
+    <ack_code class="error" code="9160" text="Fehlt"/>
+    <ack_code class="error" code="9170" text="Tritt zu oft auf"/>
+    <ack_code class="error" code="9180" text="Wird nicht mehr akzeptiert"/>
+    <ack_code class="error" code="9190" text="Nachricht enthält kein erkennbares Sicherheitsmerkmal (Signatur)"/>
+    <ack_code class="error" code="9210" text="Inhaltlich ungültig"/>
+    <ack_code class="error" code="9211" text="Verwendung eines Secoders verpflichtend"/>
+    <ack_code class="error" code="9212" text="Inhalt zu groß"/>
+    <ack_code class="error" code="9215" text="Inhalt zu klein"/>
+    <ack_code class="error" code="9219" text="Schlüsselart falsch"/>
+    <ack_code class="error" code="9220" text="Einzelposition inhaltlich ungültig"/>
+    <ack_code class="error" code="9230" text="Unzureichendes Guthaben des Kontos"/>
+    <ack_code class="error" code="9310" text="Elektronische Signatur noch nicht hinterlegt"/>
+    <ack_code class="error" code="9320" text="Elektronische Signatur noch nicht freigeschaltet"/>
+    <ack_code class="error" code="9330" text="Elektronische Signatur gesperrt"/>
+    <ack_code class="error" code="9333" text="PIN-Zugang (noch) nicht freigeschaltet"/>
+    <ack_code class="error" code="9340" text="Elektronische Signatur falsch"/>
+    <ack_code class="error" code="9350" text="Zertifikat abgelaufen"/>
+    <ack_code class="error" code="9351" text="Zertifikat gesperrt"/>
+    <ack_code class="error" code="9352" text="Zertifikatseigner unbekannt"/>
+    <ack_code class="error" code="9353" text="Zertifikatssignatur falsch"/>
+    <ack_code class="error" code="9354" text="Bitte Einreichung der Zweitkennung wiederholen mit RDH-%d"/>
+    <ack_code class="error" code="9355" text="Fehler im Zertifikatsaufbau"/>
+    <ack_code class="error" code="9356" text="Zertifikatstyp nicht aktzeptiert"/>
+    <ack_code class="error" code="9359" text="OCSP-Anfrage nicht beendet"/>
+    <ack_code class="error" code="3960" text="Sperrung der Signatur nach weiteren x Falschsignaturen"/>
+    <ack_code class="error" code="9370" text="Signaturberechtigung reicht nicht aus"/>
+    <ack_code class="error" code="9380" text="Benutzer hat keine Auftragsberechtigung"/>
+    <ack_code class="error" code="9390" text="Doppeleinreichung"/>
+    <ack_code class="error" code="9400" text="Allgemeiner Fehler des Sicherheitsmediums"/>
+    <ack_code class="error" code="9420" text="Challenge-Betrag passt nicht zum Auftrag"/>
+    <ack_code class="error" code="9800" text="Abgebrochen"/>
+    <ack_code class="error" code="9901" text="Fehler Kryptomodul Signaturverifizierung"/>
+    <ack_code class="error" code="9910" text="PIN ungültig, bitte richtige PIN eingeben"/>
+    <ack_code class="error" code="9920" text="Reservierung nicht möglich, keine freien TANs mehr vorhanden"/>
+    <ack_code class="error" code="9930" text="Ihre PIN ist gesperrt."/>
+    <ack_code class="error" code="9931" text="Sperrung des Kontos nach %d Fehlversuchen"/>
+    <ack_code class="error" code="9939" text="Freischalten der Mobilfunknummer für mobileTAN nicht möglich"/>
+    <ack_code class="error" code="9941" text="TAN ungültig"/>
+    <ack_code class="error" code="9942" text="PIN ungültig"/>
+    <ack_code class="error" code="9943" text="TAN bereits verbraucht"/>
+    <ack_code class="error" code="9951" text="Zeitueberschreitung im Zwei-Schritt-Verfahren - TAN ungueltig"/>
+    <ack_code class="error" code="9953" text="Nur ein Signaturpflichtiger Auftrag pro Nachricht erlaubt"/>
+    <ack_code class="error" code="9954" text="Mehrfach-TANs nicht erlaubt"/>
+    <ack_code class="error" code="9955" text="Ein-Schritt-TAN-Verfahren nicht zugelassen"/>
+    <ack_code class="error" code="9956" text="Zeitversetzte Eingabe von Mehrfach-TANs nicht erlaubt"/>
+    <ack_code class="error" code="9957" text="Wechsel des Signatur-Prozesses bei Mehrfach-Signaturen nicht erlaubt"/>
+    <ack_code class="error" code="9958" text="Das genutzte Legitimationsverfahren wird nicht mehr unterstützt"/>
+    <ack_code class="error" code="9959" text="SMS konnte nicht gesendet werden - bitte Vorgang wiederholen"/>
+    <ack_code class="error" code="9960" text="Es kann kein TAN-pflichtiger Auftrag durchgeführt werden."/>
+    <ack_code class="error" code="9961" text="Bitte schalten Sie die Mobilfunkverbindung für mobileTAN frei"/>
+    <ack_code class="error" code="9962" text="Auftrag nicht ausgeführt - die Telefonbezeichnung ist unbekannt"/>
+    <ack_code class="error" code="9963" text="Auftrag nicht ausgeführt - Rufnummer für SMS fehlerhaft"/>
+    <ack_code class="error" code="9964" text="Auftrag nicht ausgeführt - keine gültige Karte für chipTAN"/>
+    <ack_code class="error" code="9980" text="Abgebrochen - Zweischrittdialog"/>
+    <ack_code class="error" code="9991" text="chipTAN nicht zulässig bei Benutzerkennung für iTAN"/>
+    <ack_code class="error" code="9992" text="Eine neue TAN-Liste wurde bereits erstellt"/>
+    <ack_code class="error" code="9998" text="Daten sind nicht zu entschlüsseln"/>
+    <ack_code class="error" code="9999" text="Auftrag konnte aus technischen Gründen nicht verarbeitet werden."/>
+</codes>

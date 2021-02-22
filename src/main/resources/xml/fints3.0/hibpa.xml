@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<segment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../xsd/fints3.0/segment.xsd">
+
+    <segment_version version="3">
+        <deg element_name="Segmentkopf"
+             element_anzahl="1"
+             element_status="M">
+            <de element_name="Segmentname" element_format="an" element_laenge="..6" element_status="M"
+                element_anzahl="1"/>
+            <de element_name="Segmentnummer" element_format="num" element_laenge="..3" element_status="M"
+                element_anzahl="1"/>
+            <de element_name="Segmentversion" element_format="num" element_laenge="..2" element_status="M"
+                element_anzahl="1"/>
+        </deg>
+
+        <de element_name="BPD-Version"
+            element_format="num"
+            element_laenge="..3"
+            element_status="M"
+            element_anzahl="1"/>
+
+        <deg element_name="Kreditinstitutskennung"
+            element_format="kik"
+            element_status="M"
+            element_anzahl="1"/>
+
+        <de element_name="Kreditinstitutsbezeichnung"
+            element_format="an"
+            element_laenge="..60"
+            element_status="M"
+            element_anzahl="1"/>
+
+        <de element_name="Anzahl Geschäftsvorfälle"
+            element_format="num"
+            element_laenge="..3"
+            element_status="M"
+            element_anzahl="1"/>
+
+        <deg element_name="Unterstütze Sprachen"
+             element_status="M"
+             element_anzahl="1">
+            <de element_name="Unterstütze Sprachen" element_format="code" element_laenge="..3" element_status="M"
+                element_anzahl="..9" element_restriktionen="1, 2, 3"/>
+        </deg>
+
+        <deg element_name="Unterstütze HBCI-Versionen"
+             element_status="M"
+             element_anzahl="1">
+            <de element_name="Unterstütze HBCI-Versionen" element_format="num" element_laenge="..3" element_status="M"
+                element_anzahl="..9"/>
+        </deg>
+
+        <de element_name="Maximale Nachrichtengröße"
+            element_format="num"
+            element_laenge="..4"
+            element_status="O"
+            element_anzahl="1"/>
+
+        <de element_name="Minimaler Timeout-Wert"
+            element_format="num"
+            element_laenge="..4"
+            element_status="O"
+            element_anzahl="1"/>
+
+        <de element_name="Maximaler Timeout-Wert"
+            element_format="num"
+            element_laenge="..4"
+            element_status="O"
+            element_anzahl="1"/>
+    </segment_version>
+</segment>
