@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Segment, das root Element jeder Segment - XML Datei, beihaltet beliebig viele Segmentversionen -->
+    <xsd:element name="segment"
+                 type="segmentType"/>
+
+
+    <xsd:complexType name="segment_versionType">
+        <xsd:sequence>
+            <xsd:choice maxOccurs="unbounded">
+                <xsd:element type="degType" name="deg" maxOccurs="unbounded" minOccurs="0"/>
+                <xsd:element type="deType" name="de" maxOccurs="unbounded" minOccurs="0"/>
+            </xsd:choice>
+        </xsd:sequence>
+        <xsd:attribute type="xsd:string" name="version"/>
+    </xsd:complexType>
+
+    <!-- Segmentversion, es kann beliebig viele Segmentversionen geben -->
+    <xsd:complexType name="segmentType">
+        <xsd:sequence>
+            <xsd:element type="segment_versionType" name="segment_version" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="degType">
+        <xsd:sequence>
+            <xsd:choice maxOccurs="unbounded">
+                <xsd:element type="degType" name="deg" maxOccurs="unbounded" minOccurs="0"/>
+                <xsd:element type="deType" name="de" maxOccurs="unbounded" minOccurs="0"/>
+            </xsd:choice>
+        </xsd:sequence>
+        <xsd:attribute type="xsd:string" name="element_name" use="required"/>
+        <xsd:attribute type="xsd:string" name="element_alias" use="optional"/>
+        <xsd:attribute type="format" name="element_format" use="optional"/>
+        <xsd:attribute type="status" name="element_status" use="required"/>
+        <xsd:attribute type="xsd:int" name="element_anzahl" use="required"/>
+        <xsd:attribute type="xsd:string" name="element_restriktionen" use="optional"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="deType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute type="xsd:string" name="element_name" use="required"/>
+                <xsd:attribute type="xsd:string" name="element_alias" use="optional"/>
+                <xsd:attribute type="format" name="element_format" use="required"/>
+                <xsd:attribute type="length" name="element_laenge" use="optional"/>
+                <xsd:attribute type="status" name="element_status" use="required"/>
+                <xsd:attribute type="length" name="element_anzahl" use="required"/>
+                <xsd:attribute type="xsd:string" name="element_restriktionen" use="optional"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:simpleType name="typ">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="DE"/>
+            <xsd:enumeration value="DEG"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="status">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="M"/>
+            <xsd:enumeration value="K"/>
+            <xsd:enumeration value="C"/>
+            <xsd:enumeration value="O"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="format">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="an"/>
+            <xsd:enumeration value="bin"/>
+            <xsd:enumeration value="btg"/>
+            <xsd:enumeration value="code"/>
+            <xsd:enumeration value="cur"/>
+            <xsd:enumeration value="dat"/>
+            <xsd:enumeration value="dig"/>
+            <xsd:enumeration value="dta"/>
+            <xsd:enumeration value="id"/>
+            <xsd:enumeration value="jn"/>
+            <xsd:enumeration value="kik"/>
+            <xsd:enumeration value="kti"/>
+            <xsd:enumeration value="ktv"/>
+            <xsd:enumeration value="num"/>
+            <xsd:enumeration value="tim"/>
+            <xsd:enumeration value="tsp"/>
+            <xsd:enumeration value="ctr"/>
+            <xsd:enumeration value="sdo"/>
+            <xsd:enumeration value="null"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="length">
+        <xsd:restriction base="xsd:token">
+            <xsd:pattern value="\.{0,2}[0-9]+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>

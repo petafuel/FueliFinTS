@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<segment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../xsd/fints3.0/segment.xsd">
+
+    <segment_version version="6">
+        <deg element_name="Segmentkopf"
+             element_anzahl="1"
+             element_status="M">
+            <de element_name="Segmentname" element_format="an" element_laenge="..6" element_status="M"
+                element_anzahl="1"/>
+            <de element_name="Segmentnummer" element_format="num" element_laenge="..3" element_status="M"
+                element_anzahl="1"/>
+            <de element_name="Segmentversion" element_format="num" element_laenge="..2" element_status="M"
+                element_anzahl="1"/>
+        </deg>
+
+        <deg element_name="Kontoverbindung"
+             element_status="C"
+             element_anzahl="1"
+             element_format="ktv"
+             element_restriktionen="N: bei Geschäftsvorfällen ohne Kontenbezug M: sonst"/>
+
+        <de element_name="IBAN"
+            element_format="an"
+            element_laenge="..34"
+            element_status="O"
+            element_anzahl="1"/>
+
+        <de element_name="Kunden-ID"
+            element_format="id"
+            element_status="M"
+            element_anzahl="1"/>
+
+        <de element_name="Kontoart"
+            element_format="num"
+            element_laenge="..2"
+            element_status="O"
+            element_anzahl="1"/>
+
+        <de element_name="Kontowährung"
+            element_format="cur"
+            element_status="O"
+            element_anzahl="1"/>
+
+        <de element_name="Name des Kontoinhabers 1"
+            element_format="an"
+            element_laenge="..27"
+            element_status="M"
+            element_anzahl="1"/>
+
+        <de element_name="Name des Kontoinhabers 2"
+            element_format="an"
+            element_laenge="..27"
+            element_status="O"
+            element_anzahl="1"/>
+
+        <de element_name="Kontoproduktbezeichnung"
+            element_format="num"
+            element_laenge="..30"
+            element_status="O"
+            element_anzahl="1"/>
+
+        <deg element_name="Kontolimit"
+             element_status="K"
+             element_anzahl="1">
+            <de element_name="Limitart" element_format="code" element_laenge="1" element_status="M"
+                element_anzahl="1" element_restriktionen="E,T,W,M,Z"/>
+            <deg element_name="Limitbetrag" element_format="btg" element_status="C"
+                 element_anzahl="1" element_restriktionen=" O: Limitart Z N: sonst"/>
+            <de element_name="Limit-Tage" element_format="num" element_laenge="..3" element_status="C"
+                element_anzahl="1" element_restriktionen="0 O: Limitart = Z N: sonst"/>
+        </deg>
+
+        <deg element_name="Erlaubte Geschäftsvorfälle"
+             element_status="K"
+             element_anzahl="999">
+            <de element_name="Geschäftsvorfall" element_format="an" element_laenge="..6" element_status="M"
+                element_anzahl="1"/>
+            <de element_name="Anzahl benötigter Signaturen" element_format="num" element_laenge="..2" element_status="M"
+                element_anzahl="1" element_restriktionen="0,1,2,3"/>
+            <de element_name="Limitart" element_format="code" element_laenge="1" element_status="M"
+                element_anzahl="1" element_restriktionen="E,T,W,M,Z"/>
+            <deg element_name="Limitbetrag" element_format="btg" element_status="C"
+                 element_anzahl="1" element_restriktionen=" O: Limitart Z N: sonst"/>
+            <de element_name="Limit-Tage" element_format="num" element_laenge="..3" element_status="C"
+                element_anzahl="1" element_restriktionen="0 O: Limitart = Z N: sonst"/>
+        </deg>
+
+        <de element_name="Erweiterung, kontobezogen"
+            element_format="an"
+            element_laenge="..2048"
+            element_status="O"
+            element_anzahl="1"/>
+    </segment_version>
+</segment>

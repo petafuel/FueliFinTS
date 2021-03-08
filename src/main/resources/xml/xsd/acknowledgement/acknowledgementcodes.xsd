@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML Schema file for acknowledgement codes.
+    See FINTS_4.0_Formals.pdf for further information -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="codes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ack_code" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="class" type="ack_class" use="required"/>
+                        <xs:attribute name="code" type="xs:int" use="required"/>
+                        <xs:attribute name="text" type="xs:string" use="required"/>
+                        <xs:attribute name="lang" type="ack_lang" use="optional" default="de"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+
+    <xs:simpleType name="ack_class">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="success"/>
+            <xs:enumeration value="info"/>
+            <xs:enumeration value="warning"/>
+            <xs:enumeration value="error"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ack_lang">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="de"/>
+            <xs:enumeration value="en"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
